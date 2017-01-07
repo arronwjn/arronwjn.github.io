@@ -15,7 +15,7 @@ Linux 系统有多种发行版
 
 其他的知名 Linux 发行版还有很多，例如 Red Hat ，Suse，Fedora , CentOS 等等。
 
-###打开命令行界面
+### 打开命令行界面
 
 学习 linux 最重要的就是来使用它的命令行。
 
@@ -28,7 +28,7 @@ ls
 
 但是，命令行窗口中也能启动其他的程序，例如 Python/Javascript 的解析器。这些我们不管，所谓 学习 Linux 命令行，其实就是学习 Bash （ Mac 系统上用的命令行也是 Bash）。
 
-###Bash 简介
+### Bash 简介
 
 Bash 是各种命令行中最流行的一种，其中后两个字符 sh 是 shell 这个单词的缩写，shell 的意思就是“命令行”，前面 Ba 是人名，我们不用管。
 
