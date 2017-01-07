@@ -25,7 +25,7 @@ sudo apt-get install git
 
 验证有没有装好就敲
 
-** git --versio
+**git --versio**
 
 如果输出版号证明已经装好
 
