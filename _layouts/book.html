@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>JS 独孤求败</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="shortcut icon" href="favicon.png">
+  </head>
+  <body>
+    <div id="wrapper" class="book-content">
+      {% include header.html %}
+      <section class="content">
+        <div class="book-wrapper">
+          <div class="chapter-contents">
+            <h1>{{ page.title }}</h1>
+            {{ content }}
+          </div>
+        </div>
+      </section>
+      {% include footer.html %}
+    </div>
+  </body>
+</html>
