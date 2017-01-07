@@ -75,7 +75,7 @@ a { color: #14877E; text-decoration: none; }
 
 p.part { font-family: "Crete Round", Georgia, Times New Roman, serif; font-size: 20px; text-transform: uppercase; color: #14877E; margin: 20px 0; text-align: center; }
 
-.index-table { border-collapse: collapse; width: 700px; margin: 0 auto 30px; box-shadow: 2px 2px 4px 2px #ccc;}
+.index-table { border-collapse: collapse; width: 700px; margin: 0 auto 30px; box-shadow: 0px 2px 18px 5px #ccc;}
 
 .index-table > tbody > tr > td { border: 1px solid #ddd; line-height: 1.5; padding: 20px; vertical-align: middle; }
 
