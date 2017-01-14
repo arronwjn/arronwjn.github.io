@@ -196,5 +196,10 @@ code[class*="language-"], pre { color: #000; text-shadow: 0 1px #FFF; font-size:
 .highlight .vg { color: #008080; }
 .highlight .vi { color: #008080; }
 .highlight .il { color: #099; }
-footer{width: 100%;background-color: #81d7fd;}
-footer p{line-height: 80px;font-family: arial;text-align: center;font-size: 30px;font-weight: bold;}
+footer{width: 100%;}
+footer p{
+  color: #ccc;
+  font-family: arial;
+  text-align: center;
+  font-size: 12px;
+}
