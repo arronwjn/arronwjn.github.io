@@ -117,3 +117,25 @@ $ webpack --help
 - webpack --progress 显示构建进度
 - webpack --display-error-details 这个很有用，显示打包过程中的出错信息
 - webpack --profile 输出性能数据，可以看到每一步的耗时
+
+###　利用webpack将文件打捆
+
+找到入口index.js，打捆到bundle.js
+
+```
+./node_modules/.bin/webpack index.js bundle.js
+```
+webpack自动监听
+```
+./node_modules/.bin/webpack index.js bundle.js --watch
+```
+
+压缩代码
+```
+./node_modules/.bin/webpack index.js bundle.js -p
+```
+
+对源代码有定位功能，报错到源代码，方便错误查找
+```
+./node_modules/.bin/webpack index.js bundle.js -d
+```
