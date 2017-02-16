@@ -43,8 +43,13 @@ git config --global user.email  "happypeter1983@gmail.com"
 ```
 这样git本地工作流就完成了一个循环。
 
-如果要修改用户名和邮箱要在主目录输入命令
+### git 各个命令的作用
 
+- git push 把本地仓库中有，而远端对应仓库中没有的版本推送到远端
+- git pull 把远端仓库中有，而本地对应仓库中没有的版本拉到本地
+- git clone 把远端仓库，克隆到本地如果要修改用户名和邮箱要在主目录输入命令
+
+在家里有一个.gitconfig隐藏文件，有刚刚键入的用户名和邮箱，可以用atom打开查看和修改
 ```
 atom .gitconfig
 ```
@@ -55,3 +60,17 @@ atom .gitconfig
 git log -p
 ```
 > 小技巧：q 可以退出 git log -p 的界面，敲 j 可以往下翻，敲 k 可以往上翻。
+
+### 删除git
+当在github上克隆项目时，需要先把git删除
+
+```
+rm -rf .git
+```
+删除之后再初始化
+
+### 看仓库里内容和修改内容
+
+```
+git status
+```

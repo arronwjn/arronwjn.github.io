@@ -45,12 +45,6 @@ git clone 命令
 git clone git@github.com:happypeter/digicity.git
 clone 的特点就是不仅仅可以得到最新代码，而且可以得到整个改版历史。而普通下载只能得到最新版本。
 
-### git 各个命令的作用
-
-- git push 把本地仓库中有，而远端对应仓库中没有的版本推送到远端
-- git pull 把远端仓库中有，而本地对应仓库中没有的版本拉到本地
-- git clone 把远端仓库，克隆到本地
-
 ### 添加门牌号
 
 ```
