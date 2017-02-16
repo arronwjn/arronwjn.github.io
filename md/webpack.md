@@ -118,7 +118,7 @@ $ webpack --help
 - webpack --display-error-details 这个很有用，显示打包过程中的出错信息
 - webpack --profile 输出性能数据，可以看到每一步的耗时
 
-###　利用webpack将文件打捆
+### 利用webpack将文件打捆
 
 找到入口index.js，打捆到bundle.js
 
