@@ -21,7 +21,7 @@ title: github
 
 ### 第二步：创建github.com上的同名仓库
 
-### 添加 ssh key
+### 第三步添加 ssh key
 
 为了达成开发机和 github.com 的互信。因为开发过程中，我们需要用本地机器向 github.com 的仓库中 写东西（ git push ），同时我们又不想每次都输入密码，所以我们就用 ssh key 的形式来达成互信，过程 如下：
 
@@ -38,7 +38,7 @@ title: github
 ...make sure ... correct access right ...
 大功告成。
 
-git clone 命令
+### git clone 命令
 
 要想把 github 上的一个项目代码下载到本地有两种方式，一种就是普通下载（ download ）。但是，开发者 基本上会选择另外一种方式，就是 clone 。
 
@@ -54,12 +54,24 @@ git remote add origin https://git.coding.net/arronwjn/arronwjn.git
 查看门牌号：
 
 ```
-
 cat .git/config
 ```
 
 上传到github
-
 ```
 git push -u origin master
+```
+
+### 在Coding.net上的不同
+
+- 要新建分支
+
+```
+查看当前分支：git branch
+在本地创建coding-pages新分支：git checkout -b coding-pages
+在远端创建相同分支并把本地分支内容上传：git push -u origin coding-pages
+```
+github上创建分支如下：
+```
+git checkout -b gh-pages
 ```
