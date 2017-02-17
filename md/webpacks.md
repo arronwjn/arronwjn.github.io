@@ -9,9 +9,9 @@ title: webpack-demos
 - 第一步需要用npm下载如下包
 
 ```
-babel-loader  babel-core  babel-preset-es2015
+babel-loader  babel-core
 ```
-- 第二步创建.babelrc配置文件,里边添加｛ "presets": ["es2015"],"stage-0"｝,添加完之后需要再下载 babel-preset-stage-0包
+- 第二步创建.babelrc配置文件,里边添加｛ "presets": ["env"｝,添加完之后需要再下载 babel-preset-env包
 
 - 第三步创建webpack配置文件webpack.config.js,配置文件里代码如下
 
@@ -25,10 +25,10 @@ module.exports = {
     filename: 'bundle.js'
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js$/,
-        loader: 'babel'
+        use: 'babel'
       }
     ]
   }
