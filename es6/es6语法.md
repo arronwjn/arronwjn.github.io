@@ -152,3 +152,124 @@ console.log(add(1,2,3,4,5,100));
   console.log(result);
 }
 ```
+### 构造函数的简单继承(es5)
+
+```
+{
+  function Point(x,y){
+    this.x=x;
+    this.y=y;
+  }
+  Point.prototype.toString=function(){
+    return `(${this.x},${this.y})`
+  }
+  let p=new Point(1,2);
+  console.log(p.x);
+  console.log(p.y);
+  console.log(p.toString());
+}
+```
+例子２
+```
+{
+  function Point(x,y){
+    this.x=x;
+    this.y=y;
+  }
+
+  Point.prototype.toString=function(){
+    return `(${this.x},${this.y})`
+  }
+
+  function Hello(){
+    this.toString=function(){
+      return 'hello say'
+    }
+  }
+
+  Hello.prototype=new Point(3,4)
+  let p=new Hello();
+  console.log(p.x);
+  console.log(p.y);
+  console.log(p.toString());
+}
+```
+
+### class类(es6继承)
+
+```
+class Point{
+    constructor(x,y){
+      this.x=x;
+      this.y=y;
+    }
+    toString(c,d){
+      console.log('scasa');
+      return 'this.x';
+    }
+  }
+
+  class Hello extends Point{
+    say(){
+      return this.x;
+    }
+  }
+
+  var p=new Hello(6,8);
+  console.log(p.x,p.y);
+  console.log(p.say());
+```
+> 注意：只要实例化Point，constructor方法就会自动执行，一般追加属性
+
+class实现demo
+
+```
+{
+  class Father{
+    render(){
+      throw new Error('子类必须实现')
+    }
+    _render(){
+      return (`<ul>${this.render()}</ul>`)
+    }
+  }
+  class Son extends Father{
+    render(){
+      return (`
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        `);
+    }
+  }
+  document.getElementById('app').innerHTML=new Son()._render();
+}
+```
+
+### module模块
+
+- 命名导出
+- 默认导出
+
+```
+let a=10;
+let b=443;
+function aa(){
+  console.log('aaaa');
+}
+class Father{
+  render(){
+    throw new Error('子类必须实现')
+  }
+  _render(){
+    return (`<ul>${this.render()}</ul>`)
+  }
+}
+export {a,aa,Father};  //命名导出
+export default b;      //默认导出
+```
+引入导出的
+```
+import {a,aa,Father} from './test';
+import demo from './test';
+```
