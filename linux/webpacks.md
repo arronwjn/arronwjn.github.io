@@ -56,6 +56,29 @@ module.exports = {
 webpack
 ```
 
+### webpack的配置文件webpack.config.js
+
+```
+module.exports={
+  entry:'./es6.js',　　　//指定入口文件
+  output:{
+    path:'build',　　　　　　//出口文件所在文件夹
+    filename:'bundle.js'　　//出口文件
+  },
+  devtool:'eval' ,//找到源代码错误
+  module: {
+    rules: [
+      {
+        test: /\.js$/,　　　　//编译.js文件
+        exclude: /node_modules/,
+        use: "babel-loader"  //用babel-loader包编译
+       }
+    ]
+  }
+}
+
+```
+
 ### webpack打捆Es6模块
 
 Webpack 可以支持的模块格式不局限于 ES6 模块 ，但是由于我们写 React 项目主要用 ES6 来写，所以这一集就来演示一下用 Webpack 打捆 ES6 模块。

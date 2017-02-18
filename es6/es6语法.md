@@ -29,6 +29,16 @@ let [a, b, c] = [1, 2, 3];
 ```
 let { foo, bar } = { foo: "aaa", bar: "bbb" };
 ```
+**字符串解构**
+```
+const [a, b, c, d, e] = 'hello';
+a // "h"
+b // "e"
+c // "l"
+d // "l"
+e // "o"
+```
+
 
 ### rest参数
 
@@ -128,7 +138,7 @@ console.log(add(1,2,3,4,5,100));
   })
 }
 ```
-> forEach没有返回值
+> 注意：forEach没有返回值
 
 ### filter过滤
 
