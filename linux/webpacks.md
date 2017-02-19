@@ -58,6 +58,8 @@ webpack
 
 ### webpack的配置文件webpack.config.js
 
+配置文件里要指定入口文件和出口文件，module里写下载编译的包的配置
+
 ```
 module.exports={
   entry:'./es6.js',　　　//指定入口文件
@@ -66,6 +68,9 @@ module.exports={
     filename:'bundle.js'　　//出口文件
   },
   devtool:'eval' ,//找到源代码错误
+  resolve:{                   //解决文件后缀省略
+    extensions: [".js",".css",".jpg",".png"]
+  },
   module: {
     rules: [
       {

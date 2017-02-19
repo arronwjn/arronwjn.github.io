@@ -219,7 +219,8 @@ class Point{
   console.log(p.x,p.y);
   console.log(p.say());
 ```
-> 注意：只要实例化Point，constructor方法就会自动执行，一般追加属性
+> 注意1：只要实例化Point，constructor方法就会自动执行，一般追加属性
+> 注意２:如果继承里constructor方法，要在里面加super()
 
 class实现demo
 
