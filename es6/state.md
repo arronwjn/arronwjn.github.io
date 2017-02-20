@@ -52,4 +52,27 @@ constructor(){
 ```
 - 然后修改state
 
-### bind()方法改变this指向
+用state做点击加１的功能
+
+```
+class App extends React.Component{
+  constructor(){
+    super();　　　　　　　 //在继承里如果定义constructor，要在顶部加super方法
+    this.state={        //定义一个state
+      const: 0          //给state里的const属性一个值
+    }
+  }
+  add(){
+    this.setState({const:this.state.const+1})    //修改state
+  }
+  render(){
+    return(
+      <div>
+        数字是：{this.state.const}　　　//显示state里const属性的值
+        <button onClick={this.add.bind(this)}>+1</button>　　//点击事件，执行add方法修改state
+      </div>
+    )
+  }
+}
+```
+> bind()方法改变this指向

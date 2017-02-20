@@ -9,10 +9,17 @@ title: react基础
 npm install react react-dom --save
 ```
 
-### babel装编译react语法的包
+### 编译react
 
+- 首先准装包
 ```
  npm install --save-dev babel-preset-react
+```
+- 第二步，修改 .babelrc 文件，为
+```
+{
+  "presets": ["es2015", "stage-0", "react"]
+}
 ```
 
 ### JSX语法特点
