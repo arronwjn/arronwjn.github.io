@@ -4,6 +4,10 @@ title: state
 
 ### state
 
+用状态控制组件变化 可以把一个组件看做一个状态机, 每一次状态对应于组件的一个 ui
+
+**组件内部的状态，可以使用 state**
+
 ```
 import React from 'react'
 
