@@ -167,3 +167,9 @@ class DestroyComponent extends Component {
 
 export default DestroyComponent;
 ```
+### props(实现组件间的传递)特点：
+
+- 只能从父组件传给子组件
+- 子组件通过{this.prpos.[name]}获取prpos
+- 子组件设置默认属性Btn.defaultProps={}
+- 子组件设置属性格式验证Btn.propTypes={}
