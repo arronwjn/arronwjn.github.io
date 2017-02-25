@@ -123,3 +123,21 @@ class DestroyComponent extends Component {
 
 export default DestroyComponent;
 ```
+### 回顾组件的渲染过程
+
+# 创建-》渲染-》销毁
+
+getDefaultProps()
+getInitialState()
+componentWillMount()
+render()
+componentDidMount()
+componentWillUnmount()
+
+# 更新组件
+
+componentWillReceiveProps()
+shouldComponentUpdate()
+componentWillUpdate()
+render()
+componentDidUpdate()
