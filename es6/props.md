@@ -4,7 +4,7 @@ title: props
 
 ### 1.props
 
-通过 this.props 可以获取传递给该组件的属性值，还可以通过定义 getDefaultProps 来指定默认属性值（这是ES5的写法，ES6定义组件的默认props可以直接写props）
+通过 this.props 可以获取传递给该组件的属性值，还可以通过定义 **defaultProps** 来指定默认属性值（这是ES6的写法）
 
 下面几个是props的常用API：
 
