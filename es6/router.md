@@ -278,7 +278,7 @@ const Page = (props) =>
 
 const Links = () =>
   <nav>
-    <Link to={{ pathname: "/", query: {message: "guoyongfeng"} }} />
+    <Link to={/*{ pathname: "/", query: {message: "guoyongfeng"} */}*/ } />
   </nav>
 
 class App extends Component {
