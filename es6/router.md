@@ -375,6 +375,15 @@ class App extends Component {
 export default App;
 ```
 
+### 封装的返回主页和返回几层方法
+
+```
+browserHistory.push('/') 返回主页
+browserHistory.go(-1) 返回上一级
+browserHistory.goBack() 返回主页
+```
+> 同理hashHistory或this.props.router也有此类方法
+
 # 参考资料
 
 - [react-router-cn](https://github.com/react-guide/react-router-cn)
