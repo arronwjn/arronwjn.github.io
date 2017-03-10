@@ -20,70 +20,7 @@
 		      </h2>
 		    </div>
 		  </div>
-			<nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
-					<ul class="nav sidebar-nav">
-							<li class="sidebar-brand">
-									<a href="#">
-										 章节
-									</a>
-							</li>
-							<li>
-									<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-folder"></i> 前端入门知识总结 <span class="caret"></span></a>
-									<ul class="dropdown-menu" role="menu">
-										<li class="dropdown-header">前端入门知识总结</li>
-										<li><a href="linux/first.html">操作ps</a></li>
-									</ul>
-							</li>
-							<li>
-									<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-folder"></i> Linux基础 <span class="caret"></span></a>
-									<ul class="dropdown-menu" role="menu">
-										<li class="dropdown-header">Linux基础</li>
-										<li><a href="linux/first.html">github创建个人网站</a></li>
-										<li><a href="linux/mingling.html">Linux命令行</a></li>
-										<li><a href="linux/git.html">git本地交流</a></li>
-										<li><a href="#">atom编辑器</a></li>
-										<li><a href="linux/github.html">上传代码到github</a></li>
-										<li><a href="linux/nodejs.html">安装nodejs</a></li>
-										<li><a href="linux/webpack.html">webpack基础</a></li>
-										<li><a href="linux/webpacks.html">webpack进阶</a></li>
-									</ul>
-							</li>
-							<li>
-									<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-folder"></i>es6和面向对象<span class="caret"></span></a>
-									<ul class="dropdown-menu" role="menu">
-										<li class="dropdown-header">es6和面向对象编程</li>
-										<li><a href="es6/es6语法.html">hello Es6</a></li>
-									</ul>
-							</li>
-							<li>
-									<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-folder"></i>react基础知识<span class="caret"></span></a>
-									<ul class="dropdown-menu" role="menu">
-										<li class="dropdown-header">react基础知识</li>
-										<li><a href="es6/react.html">react基础</a></li>
-										<li><a href="es6/state.html">state状态</a></li>
-										<li><a href="es6/props.html">props</a></li>
-										<li><a href="es6/lifecycle.html">生命周期</a></li>
-										<li><a href="es6/ref.html">ref/event和form</a></li>
-										<li><a href="es6/router.html">react-router路由</a></li>
-										<li><a href="es6/ajax.html">ajax请求和localStorage</a></li>
-									</ul>
-							</li>
-							<li>
-									<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-folder"></i>Express<span class="caret"></span></a>
-									<ul class="dropdown-menu" role="menu">
-										<li class="dropdown-header">Express</li>
-										<li><a href="express/express.html">你好Express</a></li>
-										<li><a href="express/react-express.html">React牵手Express</a></li>
-										<li><a href="express/mongo.html">MongoDB</a></li>
-									</ul>
-							</li>
-					</ul>
-			</nav>
-				<button type="button" class="hamburger is-closed animated fadeInLeft" data-toggle="offcanvas">
-					<span class="hamb-top"></span>
-					<span class="hamb-middle"></span>
-					<span class="hamb-bottom"></span>
-				</button>
+			{% include nav.html %}
 	</header>
 
 	      <section class="content clearfix">
