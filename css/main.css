@@ -136,7 +136,7 @@ code[class*="language-"], pre { color: #000; text-shadow: 0 1px #FFF; font-size:
 .chapter-contents p > code, .chapter-contents ul > code, .chapter-contents ol > code, .chapter-contents li > code { padding-right: 4px; padding-left: 4px; padding-top: 2px; padding-bottom: 2px; background-color: #F5F5F5; color: #14877E; border-radius: 4px; font-size: 15px; }
 
 /** Syntax highlighting styles */
-.highlight { background: #fff; }
+.highlight { background: #ece3e3; }
 .highlight .c { color: #998; font-style: italic; }
 .highlight .err { color: #a61717; background-color: #e3d2d2; }
 .highlight .k { font-weight: bold; }
