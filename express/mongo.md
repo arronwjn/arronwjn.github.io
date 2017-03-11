@@ -159,7 +159,6 @@ Mongo-express 是一个用 express 技术开发的，MongoDB 的 GUI (图形界�
 
 ```
 npm install -g mongo-express
-
 ```
 
 mongo-express 装好之后，我们需要通知它到底要连接到哪个数据库，通过修改 mongo-express 的配置文件来搞定。
@@ -169,7 +168,6 @@ mongo-express 装好之后，我们需要通知它到底要连接到哪个数据
 ```
 $ npm list -g mongo-express
 /home/peter/.nvm/versions/node/v7.1.0/lib
-
 ```
 找到后，就可以进入安装文件夹来修改配置文件了
 
@@ -178,7 +176,6 @@ cd /home/peter/.nvm/versions/node/v7.1.0/lib
 cd node_modules
 cd mongo-express
 cp config.default.js config.js
-
 ```
 最后一步，就是把样例配置文件 config.defualt.js ，改名为真实的配置文件　config.js , 也就是说是程序会自动读到的配置文件。
 
@@ -192,7 +189,6 @@ mongo = {
   ...
   url:      'mongodb://localhost:27017/db',
 };
-
 ```
 **改为**
 
@@ -204,7 +200,6 @@ mongo = {
   ...
   url:      'mongodb://localhost:27017/digicity',
 };
-
 ```
 上面的　digicity 就是我们要操作的数据库的名字，这个是通过　mongo shell 中，执行
 
@@ -228,5 +223,4 @@ basicAuth: {
 
 ```
 $ mongo-express
-
 ```
