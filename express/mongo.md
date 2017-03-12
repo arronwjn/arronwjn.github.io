@@ -149,6 +149,42 @@ WriteResult({ "nRemoved" : 1 })
 > db.users.remove({})
 ```
 
+> 查看帮助命令：db.worker.help()
+
+### save
+
+类似于insert
+
+```
+db.collection_name.save(document)
+```
+
+- collection_name 集合的名字
+- document 插入的文档
+
+```
+db.person.save({name:"xiaoHong",age:50})
+```
+
+### findOne
+
+查询匹配结果的第一条数据 语法
+
+```
+db.collection_name.findOne()
+```
+
+### 条件操作符
+
+条件操作符用于比较两个表达式并从mongoDB集合中获取数据
+
+![CSDN图标](http://7xjf2l.com2.z0.glb.qiniucdn.com/mongodb-where-1.png)
+
+
+
+
+
+
 ### 图形化的操作界面 mongo-express
 
 Mongo-express 是一个用 express 技术开发的，MongoDB 的 GUI (图形界面)。可以方便美观的 操作 MongoDB 中的数据。
