@@ -1,8 +1,7 @@
 ---
-title: react牵手Express
+title: 前端项目准备
 ---
 
-### 前端项目准备
 
 前面的课程中，我们已经学习了 React 开发。那么先在就来写一个完全跟后台无关的 React 的 Hello World ，要求：
 

@@ -17,6 +17,7 @@ https://www.mongodb.com/ 是 MongoDB 的官网。http://www.mongoing.com/ 是 Mo
 - Collection: 集合。类似于关系型数据库下的表的概念，例如全班同学信息。
 - Document：文档。一个集合中会包含多个文档（一个文档中存储一个同学的信息）。文档对应关系型数据库中的 记录 这个概念。
 
+![CSDN图标](http://7xjf2l.com1.z0.glb.clouddn.com/mongodbstructure.jpg)
 举例子来说，一个项目叫 facebook ，那么我们就建立一个 database 来存储这个项目的所有数据。 一个数据库中，可以创建多个集合，比如 users 。一个 users 集合中，可以包含多个文档，每个文档中存储一个 user 的信息（信息可以有多项：email, name, brithday …）。
 
 ### MongoDB安装
@@ -181,8 +182,275 @@ db.collection_name.findOne()
 ![CSDN图标](http://7xjf2l.com2.z0.glb.qiniucdn.com/mongodb-where-1.png)
 
 
+### 大于操作符
+
+```
+db.collectoin_name.find({<key>:{$gt:<value>}})
+```
+参数
+
+- collectoin_name 集合名称
+- key 字段
+- value 值
+
+实例
+
+```
+db.worker.find({age:{$gt:30}}) 查询age 大于 30的数据
+```
 
 
+###大于等于操作符
+
+语法
+
+```
+db.collectoin_name.find({<key>:{$gte:<value>}})
+```
+
+### 小于操作符
+
+语法
+
+```
+db.collectoin_name.find( {<key>:{$lt:<value>}})
+```
+
+### 小于等于操作符
+
+语法
+
+```
+db.collectoin_name.find({<key>:{$lte:<value>}})
+```
+
+### 同时使用 $gte和$lte
+
+语法
+
+```
+db.collectoin_name.find({<key>:{$gte:<value>},<key>:{$lte:<value>}})
+```
+
+参数
+
+- collectoin_name 集合名称
+- key 字段
+- value 值
+实例 查询age 大于等于 30 并且 age 小于等于 50 的数据
+
+```
+db.worker.find({age: {$gte: 30, $lte: 50}})
+```
+
+### 等于
+
+语法
+
+```
+db.collectoin_name.find({<key>:<value>,<key>:<value>})
+```
+
+参数
+
+- collectoin_name集合名词
+- key字段
+- value值
+实例 查询age = 30的数据
+
+```
+db.worker.find({"age": 30})
+```
+
+### 使用 id进行查询
+
+语法
+
+```
+db.collectoin_name.find({"_id" : ObjectId("value")})
+```
+
+参数
+
+- value id的值
+实例 查询_id是 562af23062d5a57609133974 数据
+
+```
+db.worker.find({"_id" : ObjectId("562af23062d5a57609133974")})
+```
+
+### 查询结果集的条数
+
+语法
+
+```
+db.collectoin_name.find().count()
+```
+
+### 正则匹配
+
+语法
+
+```
+db.collection.find({key:/value/})
+```
+
+参数
+
+- collectoin_name 集合名称
+- key 字段
+- value 值
+实例 查询name里包含zhang的数据
+
+```
+db.worker.find({name:/value/})
+```
+
+查询某个字段的值当中是否以另一个值开头
+
+```
+db.worker.find({name:/^zhang/})
+```
+
+### 与和或
+
+and
+
+find方法可以传入多个键(key)，每个键(key)以逗号隔开
+
+语法
+
+```
+db.collection_name.find({key1:value1, key2:value2})
+```
+
+实例 查询name是zhangRenYang并且age是30的数据
+
+```
+db.worker.find({name:'zhangRenYang',age:30})
+```
+
+### or
+
+语法
+
+```
+db.collection_name.find(
+   {
+      $or: [
+         {key1: value1}, {key2:value2}
+      ]
+   }
+)
+```
+
+实例 查询age = 30 或者 age = 50 的数据
+
+```
+db.worker.find({$or:[{age = 30},{age = 50}]})
+```
+
+### and和or联用
+
+语法
+
+```
+db.collection_name.find(
+   {
+     key1:value1,
+     key2:value2,
+     $or: [
+         {key1: value1},
+         {key2:value2}
+     ]
+   }
+)
+```
+
+实例 查询 name是zhangRenYang 并且 age是30 或者 age是 50 的数据
+
+```
+db.worker.find({name:'zhangRenYang',$or:[{age:30},{age:50}]})
+```
+
+### 分页查询
+
+limit
+读取指定数量的数据记录 语法
+
+```
+db.collectoin_name.find().limit(number)
+```
+
+参数
+
+- collectoin_name集合
+- number读取的条数
+
+实例 查询前3条数据
+
+```
+db.worker.find().limit(3)
+```
+
+skip
+
+跳过指定数量的数据，skip方法同样接受一个数字参数作为跳过的记录条数 语法
+
+```
+db.collectoin_name.find().skip(number)
+```
+
+参数
+
+- collectoin_name集合
+- number跳过的条数
+
+实例 查询3条以后的数据
+
+```
+db.worker.find().skip(3)
+```
+
+skip+limit
+
+通常用这种方式来实现分页功能 语法
+
+```
+db.collectoin_name.find().skip(skipNum).limit(limitNum)
+```
+
+参数
+
+- collectoin_name 集合名称
+- skipNum 跳过的条数
+- limitNum 限制返回的条数
+
+实例 查询在4-6之间的数据
+
+```
+db.worker.find().sort({age:-1})
+```
+
+sort排序
+
+sort()方法可以通过参数指定排序的字段，并使用 1 和 -1 来指定排序的方式，其中 1 为升序排列，而-1是用于降序排列。 语法
+
+```
+db.collectoin_name.find().sort({key:1})
+db.collectoin_name.find().sort({key:-1})
+```
+
+参数
+
+- collectoin_name集合
+- key表示字段
+
+实例 查询出并升序排序 {age:1} age表示按那个字段排序 1表示升序
+
+```
+db.worker.find().sort({age:1})
+```
 
 
 ### 图形化的操作界面 mongo-express
