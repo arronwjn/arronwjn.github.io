@@ -18,6 +18,7 @@ https://www.mongodb.com/ 是 MongoDB 的官网。http://www.mongoing.com/ 是 Mo
 - Document：文档。一个集合中会包含多个文档（一个文档中存储一个同学的信息）。文档对应关系型数据库中的 记录 这个概念。
 
 ![CSDN图标](http://7xjf2l.com1.z0.glb.clouddn.com/mongodbstructure.jpg)
+
 举例子来说，一个项目叫 facebook ，那么我们就建立一个 database 来存储这个项目的所有数据。 一个数据库中，可以创建多个集合，比如 users 。一个 users 集合中，可以包含多个文档，每个文档中存储一个 user 的信息（信息可以有多项：email, name, brithday …）。
 
 ### MongoDB安装
