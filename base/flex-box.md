@@ -289,12 +289,12 @@ lign-self属性允许单个项目有与其他项目不一样的对齐方式，�
 
 骰子的一面，最多可以放置9个点。
 
-![](http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071328.png)
+![](https://arronwjn.github.io/images/img/bg2015071328.png)
 
 
 下面，就来看看Flex如何实现，从1个点到9个点的布局。你可以到codepen查看Demo
 
-![](http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071329.png)
+![](https://arronwjn.github.io/images/img/bg2015071329.png)
 
 如果不加说明，本节的HTML模板一律如下。
 
@@ -310,7 +310,7 @@ lign-self属性允许单个项目有与其他项目不一样的对齐方式，�
 
 首先，只有左上角1个点的情况。Flex布局默认就是首行左对齐，所以一行代码就够了
 
-![](http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071301.png)
+![](https://arronwjn.github.io/images/img/bg2015071301.png)
 
 ```
 .box {
@@ -320,7 +320,7 @@ lign-self属性允许单个项目有与其他项目不一样的对齐方式，�
 
 设置项目的对齐方式，就能实现居中对齐和右对齐
 
-![](http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071302.png)
+![](https://arronwjn.github.io/images/img/bg2015071302.png)
 
 
 ```
@@ -330,7 +330,7 @@ lign-self属性允许单个项目有与其他项目不一样的对齐方式，�
 }
 ```
 
-![](http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071303.png)
+![](https://arronwjn.github.io/images/img/bg2015071303.png)
 
 ```
 .box {
@@ -342,7 +342,7 @@ lign-self属性允许单个项目有与其他项目不一样的对齐方式，�
 
 设置交叉轴对齐方式，可以垂直移动主轴。
 
-![](http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071304.png)
+![](https://arronwjn.github.io/images/img/bg2015071304.png)
 
 ```
 .box {
@@ -351,7 +351,7 @@ lign-self属性允许单个项目有与其他项目不一样的对齐方式，�
 }
 ```
 
-![](http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071305.png)
+![](https://arronwjn.github.io/images/img/bg2015071305.png)
 
 ```
 box {
@@ -362,7 +362,7 @@ box {
 ```
 
 
-![](http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071306.png)
+![](https://arronwjn.github.io/images/img/bg2015071306.png)
 
 ```
 .box {
@@ -372,7 +372,7 @@ box {
 }
 ```
 
-![](http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071307.png)
+![](https://arronwjn.github.io/images/img/bg2015071307.png)
 
 ```
 .box {
@@ -384,7 +384,7 @@ box {
 
 ### 六项目
 
-![](http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071317.png)
+![](https://arronwjn.github.io/images/img/bg2015071317.png)
 
 ```
 .box {
@@ -394,7 +394,7 @@ box {
 }
 ```
 
-![](http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071318.png)
+![](https://arronwjn.github.io/images/img/bg2015071318.png)
 
 ```
 .box {
@@ -405,7 +405,7 @@ box {
 }
 ```
 
-![](http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071319.png)
+![](https://arronwjn.github.io/images/img/bg2015071319.png)
 
 
 HTML代码如下。
@@ -451,7 +451,7 @@ CSS代码如下。
 
 ### 九项目
 
-![](http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071320.png)
+![](https://arronwjn.github.io/images/img/bg2015071320.png)
 
 ```
 .box {
@@ -464,7 +464,7 @@ CSS代码如下。
 
 最简单的网格布局，就是平均分布。在容器里面平均分配空间，跟上面的骰子布局很像，但是需要设置项目的自动缩放。
 
-![](http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071321.png)
+![](https://arronwjn.github.io/images/img/bg2015071321.png)
 
 
 HTML代码如下。
@@ -494,7 +494,7 @@ CSS代码如下。
 
 某个网格的宽度为固定的百分比，其余网格平均分配剩余的空间
 
-![](http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071322.png)
+![](https://arronwjn.github.io/images/img/bg2015071322.png)
 
 
 HTML代码如下。
@@ -538,7 +538,7 @@ css代码如下：
 
 [圣杯布局](https://en.wikipedia.org/wiki/Holy_Grail_(web_design)（Holy Grail Layout）指的是一种最常见的网站布局。页面从上到下，分成三个部分：头部（header），躯干（body），尾部（footer）。其中躯干又水平分成三栏，从左到右为：导航、主栏、副栏。
 
-![](http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071323.png)
+![](https://arronwjn.github.io/images/img/bg2015071323.png)
 
 
 HTML代码如下。
@@ -608,7 +608,7 @@ footer {
 
 我们常常需要在输入框的前方添加提示，后方添加按钮。
 
-![](http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071324.png)
+![](https://arronwjn.github.io/images/img/bg2015071324.png)
 
 HTML代码如下。
 
@@ -636,7 +636,7 @@ CSS代码如下。
 
 有时，主栏的左侧或右侧，需要添加一个图片栏。
 
-![](http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071325.png)
+![](https://arronwjn.github.io/images/img/bg2015071325.png)
 
 
 HTML代码如下。
@@ -669,7 +669,7 @@ CSS代码如下。
 
 有时，页面内容太少，无法占满一屏的高度，底栏就会抬高到页面的中间。这时可以采用Flex布局，让底栏总是出现在页面的底部。
 
-![](http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071326.png)
+![](https://arronwjn.github.io/images/img/bg2015071326.png)
 
 HTML代码如下。
 
@@ -699,7 +699,7 @@ CSS代码如下。
 
 每行的项目数固定，会自动分行。
 
-![](http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071330.png)
+![](https://arronwjn.github.io/images/img/bg2015071330.png)
 
 CSS的写法。
 
