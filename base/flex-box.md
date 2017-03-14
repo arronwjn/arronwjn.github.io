@@ -36,7 +36,7 @@ Webkit内核的浏览器，必须加上-webkit前缀。
 
 采用Flex布局的元素，称为Flex容器（flex container），简称"容器"。它的所有子元素自动成为容器成员，称为Flex项目（flex item），简称"项目"
 
-![](http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071004.png)
+![](https://arronwjn.github.io/images/img/bg2015071004.png)
 
 容器默认存在两根轴：水平的主轴（main axis）和垂直的交叉轴（cross axis）。主轴的开始位置（与边框的交叉点）叫做 **main start**，结束位置叫做 **main end**；交叉轴的开始位置叫做 **cross start**，结束位置叫做 **cross end**。
 
@@ -66,7 +66,7 @@ flex-direction属性决定主轴的方向（即项目的排列方向）。
 }
 ```
 
-![](http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071005.png)
+![](https://arronwjn.github.io/images/img/bg2015071005.png)
 
 
 它可能有4个值。
@@ -83,7 +83,7 @@ flex-direction属性决定主轴的方向（即项目的排列方向）。
 
 默认情况下，项目都排在一条线（又称"轴线"）上。flex-wrap属性定义，如果一条轴线排不下，如何换行。
 
-![](http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071006.png)
+![](https://arronwjn.github.io/images/img/bg2015071006.png)
 
 ```
 .box{
@@ -95,17 +95,17 @@ flex-direction属性决定主轴的方向（即项目的排列方向）。
 
 （1）**nowrap**（默认）：不换行
 
-![](http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071007.png)
+![](https://arronwjn.github.io/images/img/bg2015071007.png)
 
 
 （2）**wrap**：换行，第一行在上方。
 
-![](http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071008.jpg)
+![](https://arronwjn.github.io/images/img/bg2015071008.jpg)
 
 
 （3）**wrap-reverse**：换行，第一行在下方
 
-![](http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071009.jpg)
+![](https://arronwjn.github.io/images/img/bg2015071009.jpg)
 
 
 ### flex-flow
@@ -128,7 +128,7 @@ justify-content属性定义了项目在主轴上的对齐方式。
 }
 ```
 
-![](http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071010.png)
+![](https://arronwjn.github.io/images/img/bg2015071010.png)
 
 它可能取5个值，具体对齐方式与轴的方向有关。下面假设主轴为从左到右。
 
@@ -149,7 +149,7 @@ justify-content属性定义了项目在主轴上的对齐方式。
 }
 ```
 
-![](http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071011.png)
+![](https://arronwjn.github.io/images/img/bg2015071011.png)
 
 
 它可能取5个值。具体的对齐方式与交叉轴的方向有关，下面假设交叉轴从上到下。
@@ -171,7 +171,7 @@ align-content属性定义了多根轴线的对齐方式。如果项目只有一�
 }
 ```
 
-![](http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071012.png)
+![](https://arronwjn.github.io/images/img/bg2015071012.png)
 
 该属性可能取6个值。
 
@@ -205,7 +205,7 @@ order属性定义项目的排列顺序。数值越小，排列越靠前，默认
   order: <integer>;
 }
 ```
-![](http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071013.png)
+![](https://arronwjn.github.io/images/img/bg2015071013.png)
 
 ###  flex-grow属性
 
@@ -217,7 +217,7 @@ flex-grow属性定义项目的放大比例，默认为0，即如果存在剩余�
 }
 ```
 
-![](http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071014.png)
+![](https://arronwjn.github.io/images/img/bg2015071014.png)
 
 如果所有项目的flex-grow属性都为1，则它们将等分剩余空间（如果有的话）。如果一个项目的flex-grow属性为2，其他项目都为1，则前者占据的剩余空间将比其他项多一倍。
 
@@ -233,7 +233,7 @@ flex-shrink属性定义了项目的缩小比例，默认为1，即如果空间�
 }
 ```
 
-![](http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071015.jpg)
+![](https://arronwjn.github.io/images/img/bg2015071015.jpg)
 
 如果所有项目的flex-shrink属性都为1，当空间不足时，都将等比例缩小。如果一个项目的flex-shrink属性为0，其他项目都为1，则空间不足时，前者不缩小。
 负值对该属性无效。
@@ -278,7 +278,7 @@ lign-self属性允许单个项目有与其他项目不一样的对齐方式，�
 }
 ```
 
-![](http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071016.png)
+![](https://arronwjn.github.io/images/img/bg2015071016.png)
 
 > 该属性可能取6个值，除了auto，其他都与align-items属性完全一致。
 
