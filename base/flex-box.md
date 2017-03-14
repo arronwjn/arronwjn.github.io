@@ -603,3 +603,121 @@ footer {
   }
 }
 ```
+
+## 输入框的布局
+
+我们常常需要在输入框的前方添加提示，后方添加按钮。
+
+![](http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071324.png)
+
+HTML代码如下。
+
+```html
+<div class="InputAddOn">
+  <span class="InputAddOn-item">...</span>
+  <input class="InputAddOn-field">
+  <button class="InputAddOn-item">...</button>
+</div>
+```
+
+CSS代码如下。
+
+```css
+.InputAddOn {
+  display: flex;
+}
+
+.InputAddOn-field {
+  flex: 1;
+}
+```
+
+## 悬挂式布局
+
+有时，主栏的左侧或右侧，需要添加一个图片栏。
+
+![](http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071325.png)
+
+
+HTML代码如下。
+
+```html
+<div class="Media">
+  <img class="Media-figure" src="" alt="">
+  <p class="Media-body">...</p>
+</div>
+```
+
+CSS代码如下。
+
+```css
+.Media {
+  display: flex;
+  align-items: flex-start;
+}
+
+.Media-figure {
+  margin-right: 1em;
+}
+
+.Media-body {
+  flex: 1;
+}
+```
+
+## 固定的底栏
+
+有时，页面内容太少，无法占满一屏的高度，底栏就会抬高到页面的中间。这时可以采用Flex布局，让底栏总是出现在页面的底部。
+
+![](http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071326.png)
+
+HTML代码如下。
+
+```html
+<body class="Site">
+  <header>...</header>
+  <main class="Site-content">...</main>
+  <footer>...</footer>
+</body>
+```
+
+CSS代码如下。
+
+```css
+.Site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.Site-content {
+  flex: 1;
+}
+```
+
+## 流式布局
+
+每行的项目数固定，会自动分行。
+
+![](http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071330.png)
+
+CSS的写法。
+
+```css
+.parent {
+  width: 200px;
+  height: 150px;
+  background-color: black;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-start;
+}
+
+.child {
+  box-sizing: border-box;
+  background-color: white;
+  flex: 0 0 25%;
+  height: 50px;
+  border: 1px solid red;
+}
+```
