@@ -24,7 +24,7 @@ const store = createStore(comments)
 export default store;
 ```
 
-上面代码中,createStore 函数接受另一个函数作为参数，返回新生成的 Store 对象。来瞅瞅官方文档
+上面代码中,createStore 函数接受另一个函数作为参数，返回新生成的 Store 对象。来瞅瞅[官方文档](http://redux.js.org/docs/api/createStore.html)
 
 官方文档指定了一个必传的参数 reducer
 
