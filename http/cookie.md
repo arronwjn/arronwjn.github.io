@@ -80,6 +80,14 @@ $ curl -v --cookie "id=123" http://tiger.haoduoshipinc.com/hello
 
 cookie 中存储的数据不能太多（小于4k），这就是为啥浏览器会有 local storeage 这种新机制。
 
+
+### chrome搜索自身的DNS缓存
+
+网址
+
+```
+chrome://net-internals/#dns
+```
 ### 总结
 
 cookie 是一个客户端硬盘上的一个小文件。可以通过在响应中设置 Set-Cookie 这一项来设置 cookie 中的数据，cookie 中的数据每次都会自动发往服务器端。
