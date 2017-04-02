@@ -522,6 +522,162 @@ function postReducer(state = [], action) {
 ### 任务六：完成首页列表
 
 第一步：PostBody 中添加 title add title to PostBody
+
+src/components/PostBody.js
+
+```diff
+render(){
+      return(
+        <div className="post-body">
+ +        <div className="title">
+ +          { this.props.posts[this.props.postId - 1].title }
+ +        </div>
+          <div className="likes-num num" onClick={this.handleClick.bind(this)}>
+            { this.props.posts[this.props.postId - 1].likes } 喜欢
+          </div>
+ +
+          <div className="comment-num num">
+            { this.props.comments[this.props.postId].length } 评论
+          </div>
+```
+
+
 第二步：首页组件从 store 中读取数据 read post data from store
 
+src/components/App.js
+
+```diff
+import React, { Component } from 'react';
+ -
+ +import { Provider } from 'react-redux';
+ +import store from '../store';
+
+  class App extends Component {
+    render(){
+      return(
+ -      <div>
+ -        { this.props.children }
+ -      </div>
+ +      <Provider store={store}>
+ +        <div>
+ +          { this.props.children }
+ +        </div>
+ +      </Provider>
+      )
+    }
+  }
+View  
+```
+
+src/components/Home.js
+
+```diff
+import React, { Component } from 'react';
+ +import { connect } from 'react-redux';
+
+  class Home extends Component {
+    render(){
+      return(
+        <div>
+ -        HOME
+ +        {console.log(this.props.posts)}
+        </div>
+      )
+    }
+  }
+
+ -export default Home;
+ +const mapStateToProps = (state) => (
+ +  {
+ +    posts: state.posts
+ +  }
+ +)
+ +
+ +export default connect(mapStateToProps)(Home);
+```
+
+src/components/Post.js
+
+```diff
+class Post extends Component {
+    render(){
+      return(
+ -      <Provider store={store}>
+          <div>
+            <div className="top  clearfix">
+              <PostBody postId={ this.props.params.postId } />
+ @@ -16,7 +15,6 @@ class Post extends Component {
+              <CommentBox postId={this.props.params.postId} />
+            </div>
+          </div>
+ -      </Provider>
+      )
+    }
+  }
+```
+
+
 第三步：首页展示博客列表： add postList to HOME
+
+src/components/App.js
+
+```diff
+import React, { Component } from 'react';
+  import { Provider } from 'react-redux';
+  import store from '../store';
+ +import { Link } from 'react-router';
+
+  class App extends Component {
+    render(){
+      return(
+        <Provider store={store}>
+          <div>
+ +          <Link to='/'  className="back-home">HOME</Link >
+            { this.props.children }
+          </div>
+        </Provider>
+```
+
+src/components/Home.js
+
+```diff
+import React, { Component } from 'react';
+  import { connect } from 'react-redux';
+ +import PostBody from './PostBody';
+
+  class Home extends Component {
+    render(){
+ +    let postList = this.props.posts.map((post, i) => <PostBody postId={post.id} key={i}>{post.title}</PostBody> )
+      return(
+ -      <div>
+ -        {console.log(this.props.posts)}
+ +      <div className='home'>
+ +        {postList}
+        </div>
+      )
+    }
+```
+
+src/components/PostBody.js
+
+```diff
+import React, { Component } from 'react';
+  import { connect } from 'react-redux';
+  import store from '../store';
+ +import { Link } from 'react-router';
+
+
+  class PostBody extends Component {
+ @@ -10,9 +11,9 @@ class PostBody extends Component {
+    render(){
+      return(
+        <div className="post-body">
+ -        <div className="title">
+ +        <Link to={`/posts/${this.props.postId}`} className="title">
+            { this.props.posts[this.props.postId - 1].title }
+ -        </div>
+ +        </Link>
+          <div className="likes-num num" onClick={this.handleClick.bind(this)}>
+            { this.props.posts[this.props.postId - 1].likes } 喜欢
+          </div>
+```
