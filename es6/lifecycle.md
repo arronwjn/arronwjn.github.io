@@ -2,19 +2,34 @@
 title: LifeCycle
 ---
 
-### 生命周期函数步骤
+# 生命周期函数步骤
 
-**1.第一步初始化，首次渲染**
-- constructor
-- componentWillMount
-- render
-- componentDidMount
-**2更新阶段(state,props发生变化时触发)**
-- componentWillReceiveProps
-- shouldComponentUpdate
-- componentWillUpdate
-- componentDidUpdate
+### 初始化,首次挂载
 
+
+- constructor (initial state)
+- componentWillMount (will mount)
+- render (render)
+- componentDidMount (did mount)
+
+
+### 更新阶段(state props 发生变化时触发)
+
+state 发生变化时
+
+- shouldComponentUpdate(必须有返回值(有两个参数 nextProps 和 nextState)) (should update)
+- componentWillUpdate(有两个参数 nextProps 和 nextState) (will update)
+- render (render)
+- componentDidUpdate(有两个参数 prevProps 和 prevState) (did update)
+
+props 发生变化时
+
+- componentWillReceiveProps(有一个参数 nextProps) (Test will receive props=== Object {childNum: 2})
+- componentWillUpdate(有两个参数 nextProps 和 nextState) (Test will update=== Object {childNum: 2} null)
+
+### 销毁
+
+- componentWillUnmount (我要被销毁了)
 
 ### 调用API定义组件
 
