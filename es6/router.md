@@ -68,6 +68,12 @@ devServer:{
   },
 ```
 
+```
+"scripts": {
+    "build": "./node_modules/.bin/webpack --config webpack.config.js",
+    "start": "./node_modules/.bin/webpack-dev-server --config webpack.dev.config.js --inline --content-base . --history-api-fallback"
+  },
+```
 > 注意：Route可以嵌套Route，
 
 ### Link
