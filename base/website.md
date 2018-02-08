@@ -17,6 +17,8 @@ title: 学习网址大全
 
 - [阮一峰博客](http://www.ruanyifeng.com/home.html)
 
+- [gitlab](https://gitlab.com/)
+
 - [郭永峰book](https://guoyongfeng.github.io/book/14/09-%E5%AE%9E%E6%88%98%EF%BC%9A%E4%B8%80%E6%AD%A5%E6%AD%A5%E5%BC%80%E5%8F%91%E4%B8%80%E4%B8%AA%20TODO%20%E5%BA%94%E7%94%A8.html)
 
 - [前端面试题](http://www.qdfuns.com/notes/23515/c9163ddd620baac5dd23141d41982bb8.html)
