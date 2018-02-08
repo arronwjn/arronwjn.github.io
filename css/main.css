@@ -44,6 +44,8 @@ a { color: #14877E; text-decoration: none; }
 
 .top-large .book-description { color: #847b7b; font-size: 18px; }
 
+.book-description {font-size: 14px;}
+
 .read-btn { background: #F27649; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; display: inline-block; color: #FFF; text-decoration: none; font-family: "myriad-pro", Arial, sans-serif; font-size: 18px; font-weight: bold; padding: 10px 30px; margin: 40px auto 0; margin-right: 20px; }
 
 .book-image { float: left; margin-top: 75px; width: 261px;border-radius: 10%;}
