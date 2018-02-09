@@ -110,7 +110,9 @@ p.part { font-family: "Crete Round", Georgia, Times New Roman, serif; font-size:
 .name-card.contributor .text { font-size: 13px; line-height: 1.8; }
 
 .divider { margin-top: 50px; min-height: 140px; background: #008080; text-align: center; letter-spacing: 1px; font-size: 30px; font-weight: bold; line-height: 140px; color: #FFF; }
+
 .divider a { color: #FFF; }
+
 .divider a:hover { color: #77F0F0; }
 
 .divider.name-list { margin-top: -40px; }
